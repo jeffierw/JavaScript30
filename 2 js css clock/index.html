@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS + CSS Clock</title>
+</head>
+
+<body>
+
+
+    <div class="clock">
+        <div class="clock-face">
+            <div class="hand hour-hand"></div>
+            <div class="hand min-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+    </div>
+
+
+    <style>
+        html {
+            background: #018DED url(http://unsplash.it/1500/1000?image=881&blur=50);
+            background-size: cover;
+            font-family: 'helvetica neue';
+            text-align: center;
+            font-size: 10px;
+        }
+        
+        body {
+            margin: 0;
+            font-size: 2rem;
+            display: flex;
+            flex: 1;
+            min-height: 100vh;
+            align-items: center;
+        }
+        
+        .clock {
+            width: 30rem;
+            height: 30rem;
+            border: 20px solid white;
+            border-radius: 50%;
+            margin: 50px auto;
+            position: relative;
+            padding: 2rem;
+            box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #EFEFEF, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .clock-face {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-3px);
+            /* account for the height of the clock hands */
+        }
+        
+        .clock-face:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+        }
+        
+        .hand {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .second-hand:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 8px;
+            height: 50%;
+            background-color: red;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 0%);
+        }
+        
+        .min-hand:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 10px;
+            height: 45%;
+            background-color: #fff;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 0%);
+        }
+        
+        .hour-hand:after {
+            position: absolute;
+            content: '';
+            display: block;
+            width: 12px;
+            height: 35%;
+            background-color: #fff;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, 0%);
+        }
+    </style>
+
+    <script>
+        let secondHand = document.querySelector('.second-hand')
+        let minHand = document.querySelector('.min-hand')
+        let hourHand = document.querySelector('.hour-hand')
+
+        function setTime() {
+            const now = new Date()
+
+            let secondsDeg = now.getSeconds() * 6 // 360/60
+            let minsDeg = now.getMinutes() * 6 + (now.getSeconds() / 60) * 6 // (now.getSeconds() / 60)表示当前秒数占一圈60秒的百分比； 乘以6度（一分钟占一圈360度的6度）得到当前分钟数向前多走的百分比
+            let hoursDeg = now.getHours() * 30 + (now.getMinutes() / 60) * 30 // (now.getMinutes() / 60)表示当前分钟占一圈60分钟的百分比； 乘以30度（一小时占一圈360度的30度） 得到当前小时向前多走的百分比
+
+            secondHand.style.transform = `rotate(${secondsDeg}deg)`
+            minHand.style.transform = `rotate(${minsDeg}deg)`
+            hourHand.style.transform = `rotate(${hoursDeg}deg)`
+
+        }
+
+        // setInterval setTimeout requestAnimationFrame
+
+        // function timeoutHandler() {
+        //     setTime()
+        //     setTimeout(timeoutHandler, 1000)
+        // }
+
+        function animationHandler() {
+            setTime()
+            window.requestAnimationFrame(animationHandler)
+        }
+        // setInterval(setTime, 1000) 设定运行间隔 一直持续运行
+
+        // setTimeout(timeoutHandler, 1000) 设定间隔 运行一次
+
+        window.requestAnimationFrame(animationHandler) // 专门处理页面更新的setTimeout
+
+
+        setTime()
+    </script>
+</body>
+
+</html>
