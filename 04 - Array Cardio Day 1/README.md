@@ -4,7 +4,7 @@
 
 ## 实现效果
 
-主要通过对一组数据的各种处理来学习JS Array的一些方法:filter，map,sort,reduce, 实现效果可通过打开HTML文件，通过控制台打印的结果来查看。
+主要通过对一组数据的各种处理来学习JS Array的一些方法:`filter,map,sort,reduce`, 实现效果可通过打开HTML文件，通过控制台打印的结果来查看。
 
 [在线查看效果](https://jeffierw.github.io/JavaScript30/04%20-%20Array%20Cardio%20Day%201/index-YepW.html)
 
