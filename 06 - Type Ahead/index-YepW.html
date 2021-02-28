@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <form class="search-form">
+        <input type="text" class="search" placeholder="City or State">
+        <ul class="suggestions">
+            <li>Filter for a city</li>
+            <li>or a state</li>
+        </ul>
+    </form>
+    <script>
+        const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+        // 获取json数据，存入创建数组中
+        const jsonArr = [];
+        fetch(endpoint).then(res => {
+            return res.json()
+        }).then(res => {
+            jsonArr.push(...res)
+        })
+
+        function matchHandler(wordToMatch, jsonArr) {
+            return jsonArr.filter(i => {
+                const reg = new RegExp(wordToMatch, 'gi')
+                return i.city.match(reg) || i.state.match(reg)
+            })
+        }
+
+
+        function numberWithCommas(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        function changeHandler() {
+            console.log(this.value);
+            const matchArr = matchHandler(this.value, jsonArr)
+
+            const html = matchArr.map(i => {
+                const reg = new RegExp(this.value, 'gi')
+
+                const cityName = i.city.replace(reg, `<span class="hl">${this.value}</span>`)
+                const stateName = i.state.replace(reg, `<span class="hl">${this.value}</span>`)
+
+                return `<li>
+                        <span class="name">${cityName},${stateName}</span>
+                        <span class="population">${numberWithCommas(i.population)}</span>
+                    </li>`
+            }).join('')
+            console.log(html);
+            ul.innerHTML = html
+        }
+
+        // 获取HTML元素
+        const input = document.querySelector('.search')
+        const ul = document.querySelector('.suggestions')
+
+        // 添加监听事件
+        input.addEventListener('change', changeHandler)
+        input.addEventListener('keyup', changeHandler)
+    </script>
+</body>
+
+</html>
