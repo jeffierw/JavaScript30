@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Canvas</title>
+</head>
+
+<body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+        function draw() {
+            var canvas = document.getElementById('draw')
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d')
+                    /* 绘制矩形 */
+                    // ctx.fillStyle = "rgb(200,0,0)"
+                    // ctx.fillRect(10, 10, 55, 50)
+                    // ctx.fillStyle = "rgba(0,0,200,0.5)"
+                    // ctx.fillRect(30, 30, 55, 50)
+
+                /* 绘制线段 */
+                // ctx.beginPath()
+                // ctx.moveTo(50, 50)
+                // ctx.lineTo(200, 50)
+                // ctx.closePath()
+                // ctx.stroke()
+
+                /* 绘制三角形边框 */
+                // ctx.beginPath()
+                // ctx.moveTo(50, 50)
+                // ctx.lineTo(200, 50)
+                // ctx.lineTo(200, 200)
+                // ctx.closePath()
+                // ctx.stroke()
+
+                /* 填充三角形 */
+                // ctx.beginPath()
+                // ctx.moveTo(50, 50)
+                // ctx.lineTo(200, 50)
+                // ctx.lineTo(200, 200)
+                // ctx.fill()
+
+                /* 绘制圆弧 */
+                // ctx.beginPath()
+                // ctx.arc(50, 50, 40, 0, Math.PI / 2, false)
+                // ctx.stroke()
+
+                /* 绘制各种圆弧 */
+                // ctx.beginPath()
+                // ctx.arc(50, 50, 40, 0, Math.PI / 2, false)
+                // ctx.stroke()
+
+                // ctx.beginPath()
+                // ctx.arc(150, 50, 40, 0, -Math.PI / 2, true)
+                // ctx.closePath()
+                // ctx.stroke()
+
+                // ctx.beginPath()
+                // ctx.arc(50, 150, 40, -Math.PI / 2, Math.PI / 2, false)
+                // ctx.fill()
+
+                // ctx.beginPath()
+                // ctx.arc(150, 150, 40, 0, Math.PI, false)
+                // ctx.fill()
+
+                /* 绘制圆弧 arcTo */
+                // ctx.beginPath()
+                // ctx.moveTo(50, 50)
+
+                // ctx.arcTo(200, 50, 200, 200, 100)
+                // ctx.lineTo(200, 200)
+                // ctx.stroke()
+
+                // ctx.beginPath()
+                // ctx.rect(50, 50, 10, 10)
+                // ctx.rect(200, 50, 10, 10)
+                // ctx.rect(200, 200, 10, 10)
+                // ctx.fill()
+
+
+
+            }
+        }
+        draw()
+    </script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+        }
+    </style>
+
+</body>
+
+</html>
