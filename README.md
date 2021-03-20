@@ -2,7 +2,7 @@
 
 ## 介绍
 
-JavaScirpt30 是 Wes Bos 推出的一个 30 天挑战。项目免费提供了 30 个视频教程、30 个挑战的起始文档和 30 个挑战解决方案源代码。目的是帮助人们用纯 JavaScript 来写东西，不借助框架和库，也不使用编译器和引用。
+[JavaScript30](https://javascript30.com) 是 [Wes Bos](https://github.com/wesbos) 推出的一个 30 天挑战。项目免费提供了 30 个视频教程、30 个挑战的起始文档和 30 个挑战解决方案源代码。目的是帮助人们用纯 JavaScript 来写东西，不借助框架和库，也不使用编译器和引用。
 
 写这份笔记是为了练习写东西，写博客的能力，另外复习一下JS的内容，为面试做准备。
 
@@ -17,7 +17,7 @@ No | Note | Demo
 05 | [Flex Panel Gallery 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Flex%20Panel%20Gallery) | [Flex实现盒子点击伸缩字体放大缩小效果](https://jeffierw.github.io/JavaScript30/Flex%20Panel%20Gallery/index-YepW.html)
 06 | [Type Ahead 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Type%20Ahead) | [fetch获取数据filter处理输入框过滤map处理返回值效果](https://jeffierw.github.io/JavaScript30/Type%20Ahead/index-YepW.html)
 07 | [Array Cardio Day 2 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Array%20Cardio%20Day%202) | [数组基本操作方法示例二](https://jeffierw.github.io/JavaScript30/Array%20Cardio%20Day%202/index-YepW.html)
-08 | Fun with HTML5 Canvas | -
+08 | [Fun with HTML5 Canvas 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Fun%20with%20HTML5%20Canvas) | [Canvas画笔效果](https://jeffierw.github.io/JavaScript30/Fun%20with%20HTML5%20Canvas/index-YepW.html)
 09 | Dev Tools Domination | -
 10 | Hold Shift and Check Checkboxes | -
 11 | Custom Video Player | -  

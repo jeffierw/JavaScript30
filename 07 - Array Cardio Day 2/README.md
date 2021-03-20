@@ -2,6 +2,12 @@
 
 > 介绍：[JavaScript30](https://javascript30.com) 是 [Wes Bos](https://github.com/wesbos) 推出的一个 30 天挑战。项目免费提供了 30 个视频教程、30 个挑战的起始文档和 30 个挑战解决方案源代码。目的是帮助人们用纯 JavaScript 来写东西，不借助框架和库，也不使用编译器和引用。完整笔记在 [GitHub](https://github.com/jeffierw/JavaScript30)
 
+## 实现效果
+
+通过一些问题介绍Array对象的另外四种方法。
+
+[在线查看效果](https://jeffierw.github.io/JavaScript30/Array%20Cardio%20Day%202/index-YepW.html)
+
 ## 笔记
 
 本节是第四节的下篇，又介绍了Array对象的另外四种方法，分别是`some()`,`every()`,`find()`,`findIndex()`

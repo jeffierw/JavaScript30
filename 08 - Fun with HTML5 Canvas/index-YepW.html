@@ -9,80 +9,48 @@
 <body>
     <canvas id="draw" width="800" height="800"></canvas>
     <script>
-        function draw() {
-            var canvas = document.getElementById('draw')
-            if (canvas.getContext) {
-                var ctx = canvas.getContext('2d')
-                    /* 绘制矩形 */
-                    // ctx.fillStyle = "rgb(200,0,0)"
-                    // ctx.fillRect(10, 10, 55, 50)
-                    // ctx.fillStyle = "rgba(0,0,200,0.5)"
-                    // ctx.fillRect(30, 30, 55, 50)
+        const canvas = document.querySelector("#draw")
+        const ctx = canvas.getContext('2d')
+        ctx.lineJoin = "round" // 线条接合处样式
+        ctx.lineCap = "round" // 线条末端样式
+        ctx.lineWidth = 100 // 线条初始宽度
 
-                /* 绘制线段 */
-                // ctx.beginPath()
-                // ctx.moveTo(50, 50)
-                // ctx.lineTo(200, 50)
-                // ctx.closePath()
-                // ctx.stroke()
+        let colorWidth = 0 // 控制绘画颜色变化
+        let direction = true // 控制粗细切换
+        let isDrawing = false // 控制是否绘画状态
+        let x = 0,
+            y = 0
 
-                /* 绘制三角形边框 */
-                // ctx.beginPath()
-                // ctx.moveTo(50, 50)
-                // ctx.lineTo(200, 50)
-                // ctx.lineTo(200, 200)
-                // ctx.closePath()
-                // ctx.stroke()
+        function draw(e) {
+            if (!isDrawing) return
+            ctx.strokeStyle = `hsl(${colorWidth},100%,50%)`
+            ctx.beginPath()
+            ctx.moveTo(x, y)
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+            [x, y] = [e.offsetX, e.offsetY]
 
-                /* 填充三角形 */
-                // ctx.beginPath()
-                // ctx.moveTo(50, 50)
-                // ctx.lineTo(200, 50)
-                // ctx.lineTo(200, 200)
-                // ctx.fill()
-
-                /* 绘制圆弧 */
-                // ctx.beginPath()
-                // ctx.arc(50, 50, 40, 0, Math.PI / 2, false)
-                // ctx.stroke()
-
-                /* 绘制各种圆弧 */
-                // ctx.beginPath()
-                // ctx.arc(50, 50, 40, 0, Math.PI / 2, false)
-                // ctx.stroke()
-
-                // ctx.beginPath()
-                // ctx.arc(150, 50, 40, 0, -Math.PI / 2, true)
-                // ctx.closePath()
-                // ctx.stroke()
-
-                // ctx.beginPath()
-                // ctx.arc(50, 150, 40, -Math.PI / 2, Math.PI / 2, false)
-                // ctx.fill()
-
-                // ctx.beginPath()
-                // ctx.arc(150, 150, 40, 0, Math.PI, false)
-                // ctx.fill()
-
-                /* 绘制圆弧 arcTo */
-                // ctx.beginPath()
-                // ctx.moveTo(50, 50)
-
-                // ctx.arcTo(200, 50, 200, 200, 100)
-                // ctx.lineTo(200, 200)
-                // ctx.stroke()
-
-                // ctx.beginPath()
-                // ctx.rect(50, 50, 10, 10)
-                // ctx.rect(200, 50, 10, 10)
-                // ctx.rect(200, 200, 10, 10)
-                // ctx.fill()
-
-
-
+            if (ctx.lineWidth <= 1 || ctx.lineWidth >= 100) {
+                direction = !direction
             }
+            if (direction) {
+                ctx.lineWidth++
+            } else {
+                ctx.lineWidth--
+            }
+            colorWidth++
+            if (colorWidth >= 360) colorWidth = 0
+            console.log(ctx.lineWidth);
         }
-        draw()
+
+
+        canvas.addEventListener("mousedown", (e) => {
+            isDrawing = true;
+            [x, y] = [e.offsetX, e.offsetY]
+        })
+        canvas.addEventListener("mousemove", draw)
+        canvas.addEventListener("mouseup", (e) => isDrawing = false)
+        canvas.addEventListener("mouseout", (e) => isDrawing = false)
     </script>
 
     <style>
