@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Console Tricks!</title>
+</head>
+
+<body>
+
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+        const dogs = [{
+            name: 'Snickers',
+            age: 2
+        }, {
+            name: 'hugo',
+            age: 8
+        }];
+        const shit = 'shit'
+
+        function makeGreen() {
+            const p = document.querySelector('p');
+            p.style.color = '#BADA55';
+            p.style.fontSize = '50px';
+        }
+
+        // 封装自己的console对象 用于开发模式 解决开发完成后删除和注释console很麻烦的问题 直接false掉isDev
+        let console = {
+            isDev: true,
+            log(...args) {
+                if (!this.isDev) return
+                window.console.log(...args)
+            },
+            warn(...args) {
+                if (!this.isDev) return
+                window.console.warn(...args)
+            },
+            error(...args) {
+                if (!this.isDev) return
+                window.console.error(...args)
+            },
+            info(...args) {
+                if (!this.isDev) return
+                window.console.info(...args)
+            },
+            assert(...args) {
+                if (!this.isDev) return
+                window.console.assert(...args)
+            },
+            clear(...args) {
+                if (!this.isDev) return
+                window.console.clear(...args)
+            },
+            dir(...args) {
+                if (!this.isDev) return
+                window.console.dir(...args)
+            },
+            groupCollapsed(...args) {
+                if (!this.isDev) return
+                window.console.groupCollapsed(...args)
+            },
+            groupEnd(...args) {
+                if (!this.isDev) return
+                window.console.groupEnd(...args)
+            },
+            count(...args) {
+                if (!this.isDev) return
+                window.console.count(...args)
+            },
+            time(...args) {
+                if (!this.isDev) return
+                window.console.time(...args)
+            },
+            timeEnd(...args) {
+                if (!this.isDev) return
+                window.console.timeEnd(...args)
+            },
+            table(...args) {
+                if (!this.isDev) return
+                window.console.table(...args)
+            },
+        }
+
+        // Regular
+        console.log(dogs);
+        // Interpolated
+        console.log('Hello I am a %s string!', '💩');
+        console.log('Hello I am a `${shit}` string!');
+        // Styled
+        console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+        // warning!
+        console.warn('警告');
+        // Error :|
+        console.error('错误');
+
+        // Info
+        console.info('Crocodiles eat 3-4 people per year');
+        // Testing
+        const p = document.querySelector('p');
+
+        console.assert(p.classList.contains('ouch'), 'That is wrong!');
+        // clearing
+        // console.clear();
+
+        // Viewing DOM Elements
+        console.log(p);
+        console.dir(p);
+        // Grouping together
+        dogs.forEach(dog => {
+            console.groupCollapsed(`${dog.name}`);
+            console.log(`This is ${dog.name}`);
+            console.log(`${dog.name} is ${dog.age} years old`);
+            console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+            console.groupEnd(`${dog.name}`);
+        });
+        // counting
+        console.count('Wes');
+        console.count('Wes');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Wes');
+        console.count('Steve');
+        console.count('Wes');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Steve');
+        console.count('Steve');
+        // timing
+        console.time('fetching data');
+        fetch('https://api.github.com/users/wesbos')
+            .then(data => data.json())
+            .then(data => {
+                console.timeEnd('fetching data');
+                console.log(data);
+            });
+
+        console.table(dogs);
+    </script>
+</body>
+
+</html>

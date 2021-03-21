@@ -14,11 +14,11 @@ No | Note | Demo
 02  | [JS + CSS Clock 笔记](https://github.com/jeffierw/JavaScript30/tree/master/02%20-%20JS%20and%20CSS%20Clock) | [JavaScript+CSS 时钟效果](https://jeffierw.github.io/JavaScript30/02%20-%20JS%20and%20CSS%20Clock/index-YepW.html)
 03  | [CSS Variables 笔记](https://github.com/jeffierw/JavaScript30/tree/master/03%20-%20CSS%20Variables) | [用 CSS 变量实现拖动控制参数效果](https://jeffierw.github.io/JavaScript30/03%20-%20CSS%20Variables/index-YepW.html)
 04  | [Array Cardio Day 1 笔记](https://github.com/jeffierw/JavaScript30/tree/master/04%20-%20Array%20Cardio%20Day%201) | [数组基本操作方法示例一](https://jeffierw.github.io/JavaScript30/04%20-%20Array%20Cardio%20Day%201/index-YepW.html)
-05 | [Flex Panel Gallery 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Flex%20Panel%20Gallery) | [Flex实现盒子点击伸缩字体放大缩小效果](https://jeffierw.github.io/JavaScript30/Flex%20Panel%20Gallery/index-YepW.html)
-06 | [Type Ahead 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Type%20Ahead) | [fetch获取数据filter处理输入框过滤map处理返回值效果](https://jeffierw.github.io/JavaScript30/Type%20Ahead/index-YepW.html)
-07 | [Array Cardio Day 2 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Array%20Cardio%20Day%202) | [数组基本操作方法示例二](https://jeffierw.github.io/JavaScript30/Array%20Cardio%20Day%202/index-YepW.html)
-08 | [Fun with HTML5 Canvas 笔记](https://github.com/jeffierw/JavaScript30/tree/master/Fun%20with%20HTML5%20Canvas) | [Canvas画笔效果](https://jeffierw.github.io/JavaScript30/Fun%20with%20HTML5%20Canvas/index-YepW.html)
-09 | Dev Tools Domination | -
+05 | [Flex Panel Gallery 笔记](https://github.com/jeffierw/JavaScript30/tree/master/05%20-%20Flex%20Panel%20Gallery) | [Flex实现盒子点击伸缩字体放大缩小效果](https://jeffierw.github.io/JavaScript30/05%20-%20Flex%20Panel%20Gallery/index-YepW.html)
+06 | [Type Ahead 笔记](https://github.com/jeffierw/JavaScript30/tree/master/06%20-%20Type%20Ahead) | [fetch获取数据filter处理输入框过滤map处理返回值效果](https://jeffierw.github.io/JavaScript30/06%20-%20Type%20Ahead/index-YepW.html)
+07 | [Array Cardio Day 2 笔记](https://github.com/jeffierw/JavaScript30/tree/master/07%20-%20Array%20Cardio%20Day%202) | [数组基本操作方法示例二](https://jeffierw.github.io/JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-YepW.html)
+08 | [Fun with HTML5 Canvas 笔记](https://github.com/jeffierw/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas) | [Canvas画笔效果](https://jeffierw.github.io/JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-YepW.html)
+09 | [Dev Tools Domination 笔记](https://github.com/jeffierw/JavaScript30/tree/master/09%20-%20Dev%20Tools%20Domination) |  [控制台各种Console调试技巧](https://jeffierw.github.io/JavaScript30/09%20-%20Dev%20Tools%20Domination/index-YepW.html)
 10 | Hold Shift and Check Checkboxes | -
 11 | Custom Video Player | -  
 12 | Key Sequence Detection | -

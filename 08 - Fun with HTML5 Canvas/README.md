@@ -6,7 +6,7 @@
 
 通过[Canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)以及它的一些API实现画笔的效果。
 
-[在线查看效果](https://jeffierw.github.io/JavaScript30/Fun%20with%20HTML5%20Canvas/index-YepW.html)
+[在线查看效果](https://jeffierw.github.io/JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-YepW.html)
 
 ## 笔记
 

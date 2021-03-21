@@ -6,7 +6,7 @@
 
 通过一些问题介绍Array对象的另外四种方法。
 
-[在线查看效果](https://jeffierw.github.io/JavaScript30/Array%20Cardio%20Day%202/index-YepW.html)
+[在线查看效果](https://jeffierw.github.io/JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-YepW.html)
 
 ## 笔记
 
