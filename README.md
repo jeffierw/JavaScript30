@@ -19,7 +19,7 @@ No | Note | Demo
 07 | [Array Cardio Day 2 笔记](https://github.com/jeffierw/JavaScript30/tree/master/07%20-%20Array%20Cardio%20Day%202) | [数组基本操作方法示例二](https://jeffierw.github.io/JavaScript30/07%20-%20Array%20Cardio%20Day%202/index-YepW.html)
 08 | [Fun with HTML5 Canvas 笔记](https://github.com/jeffierw/JavaScript30/tree/master/08%20-%20Fun%20with%20HTML5%20Canvas) | [Canvas画笔效果](https://jeffierw.github.io/JavaScript30/08%20-%20Fun%20with%20HTML5%20Canvas/index-YepW.html)
 09 | [Dev Tools Domination 笔记](https://github.com/jeffierw/JavaScript30/tree/master/09%20-%20Dev%20Tools%20Domination) |  [控制台各种Console调试技巧](https://jeffierw.github.io/JavaScript30/09%20-%20Dev%20Tools%20Domination/index-YepW.html)
-10 | Hold Shift and Check Checkboxes | -
+10 | [Hold Shift and Check Checkboxes](https://github.com/jeffierw/JavaScript30/tree/master/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes) | [Shift控制批量选中效果](https://jeffierw.github.io/JavaScript30/10%20-%20Hold%20Shift%20and%20Check%20Checkboxes/index-YepW.html)
 11 | Custom Video Player | -  
 12 | Key Sequence Detection | -
 13 | Slide in on Scroll | -
